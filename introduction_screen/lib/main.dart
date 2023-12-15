@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:introduction_screen/introduction_screen.dart';
+// import 'package:introduction_screen/introduction_screen.dart';
 
 void main(){
-
+  runApp(const App());
 }
 class App extends StatelessWidget {
   const App({super.key});
@@ -28,7 +28,7 @@ class _BoardingPageState extends State<BoardingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.only(bottom: 0.0), 
+        padding: const EdgeInsets.only(bottom: 80.0), 
         child:PageView(
         children: [
           Container(
@@ -54,6 +54,7 @@ class _BoardingPageState extends State<BoardingPage> {
         padding: const EdgeInsets.all(10.0),
         height: 80,
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             TextButton(onPressed:(){}, child: const Text("Back")),
             TextButton(onPressed:(){}, child: const Text("Next"))
